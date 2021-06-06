@@ -13,11 +13,11 @@ Go base62 encoding and decoding
 ```go
 // encode
 num := 264688217293324297
-str := Encode(int64(num))
+str := base62.Encode(int64(num))
 fmt.Println(str)
 
 // decodde
-res, err := Decode(str)
+res, err := base62.Decode(str)
 fmt.Println(res, err)
 
 ```
