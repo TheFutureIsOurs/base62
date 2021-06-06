@@ -15,6 +15,7 @@ const (
 	base int64 = 62
 )
 
+// Encode encode a num to string
 func Encode(num int64) string {
 	b := make([]byte, 0, 12)
 	for num > 0 {
@@ -25,6 +26,7 @@ func Encode(num int64) string {
 	return string(b)
 }
 
+// Decode decode a string to num
 func Decode(s string) (int64, error) {
 	var num int64
 	for i := len(s) - 1; i >= 0; i-- {
